@@ -1,0 +1,8 @@
+{
+  "name": "pug-php-test",
+  "type": "project",
+  "require": {
+    "pug-php/pug": "^3.2"
+  },
+  "authors": []
+}
