@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "rollup-plugin-serve": "^1.0.0"
+  }
+}

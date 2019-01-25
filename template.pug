@@ -1,8 +1,20 @@
-- $text = '2'
-mixin paragraph($text)
-  p= $text
-  block
+//- - $text = "2"
+//- mixin paragraph($text)
+//-   p= $text
+//-   block
 
-+paragraph('1')
-  +paragraph($text)
-+paragraph($text)
+//- +paragraph("1")
+//-   +paragraph($text)
+//- +paragraph($text)
+mixin Test ($params = [])
+  - $props = $params
+  p= $props['text']
+
+mixin Wrap($params = [])
+  - $props = $params
+  +Test(["text" => "one"])
+  p= json_encode($props)
+  if $props["label"] == true
+    +Test(["text" => "two"])
+
++Wrap(["label" => true])
